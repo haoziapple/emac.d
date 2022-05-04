@@ -9,12 +9,12 @@
 (global-display-line-numbers-mode -1)
 (global-linum-mode 1)
 
-;; leuven,tango-dark,deeper-blue,wheatgrass
-(load-theme 'wheatgrass t)
-
 ;;C-M-i Auto complete
 (hl-line-mode 1)
 (blink-cursor-mode -1)
+
+;; enable code block highlight in Org-Mode
+(setq org-src-fontify-natively t)
 
 ;; Teach Emacs to Keep Folders Clean: https://www.youtube.com/watch?v=XZjyJG-sFZI
 (setq backup-directory-alist `(("." . ,(expand-file-name "tmp/backups/" user-emacs-directory))))
@@ -54,6 +54,10 @@
   ;; integration with a Clojure REPL
   ;; https://github.com/clojure-emacs/cider
   cider
+
+  dracula-theme
+
+  use-package
   ))
 
 (dolist (p my-packages)
@@ -84,3 +88,10 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f2>") 'open-init-file)
+
+;; leuven,tango-dark,deeper-blue,wheatgrass
+;; (load-theme 'wheatgrass t)
+(use-package dracula-theme
+	     :ensure t
+	     :init
+	     (load-theme 'dracula t))
