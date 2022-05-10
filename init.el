@@ -4,10 +4,10 @@
 (tool-bar-mode -1)
 (menu-bar-mode 1)
 (scroll-bar-mode 1)
-(set-fringe-mode 12)
+(set-fringe-mode 10)
 
-(global-display-line-numbers-mode -1)
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
+(global-linum-mode -1)
 
 ;;C-M-i Auto complete
 (hl-line-mode 1)
