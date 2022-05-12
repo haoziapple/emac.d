@@ -90,11 +90,11 @@
 (global-set-key (kbd "<f2>") 'open-init-file)
 
 ;; leuven,tango-dark,deeper-blue,wheatgrass
-;; (load-theme 'wheatgrass t)
-(use-package dracula-theme
-	     :ensure t
-	     :init
-	     (load-theme 'dracula t))
+(load-theme 'wheatgrass t)
+;; (use-package dracula-theme
+;; 	     :ensure t
+;; 	     :init
+;; 	     (load-theme 'dracula t))
 
 (use-package magit
   :ensure t
