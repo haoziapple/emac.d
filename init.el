@@ -13,6 +13,9 @@
 (hl-line-mode 1)
 (blink-cursor-mode -1)
 
+;; toggle truncate lines
+(global-set-key (kbd "C-x p") 'toggle-truncate-lines)
+
 ;; enable code block highlight in Org-Mode
 (setq org-src-fontify-natively t)
 
